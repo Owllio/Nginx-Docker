@@ -22,6 +22,6 @@ RUN cd /tmp/nginx-1.7.7 && ./configure \
 		--with-http_ssl_module \
 		--with-http_stub_status_module \
 		--with-http_gzip_static_module
-RUN make && make install
+RUN cd /tmp/nginx-1.7.7 && make && make install
 
 CMD ["nginx"]
