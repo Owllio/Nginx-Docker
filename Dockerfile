@@ -24,7 +24,15 @@ RUN cd /tmp/nginx-1.7.7 && ./configure \
 		--with-http_gzip_static_module
 RUN cd /tmp/nginx-1.7.7 && make && make install
 
-EXPOSE 80
-EXPOSE 443
+
+# Remove the source files.. we don't need them anymore
+RUN rm -rf /tmp/nginx-1.7.7
+
+EXPOSE 80 # http
+EXPOSE 443 # https
+
+VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx"]
+
+WORKDIR /etc/nginx
 
 CMD ["nginx"]
