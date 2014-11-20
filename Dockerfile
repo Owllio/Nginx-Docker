@@ -24,4 +24,7 @@ RUN cd /tmp/nginx-1.7.7 && ./configure \
 		--with-http_gzip_static_module
 RUN cd /tmp/nginx-1.7.7 && make && make install
 
+EXPOSE 80
+EXPOSE 443
+
 CMD ["nginx"]
