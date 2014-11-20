@@ -29,7 +29,7 @@ RUN cd /tmp/nginx-1.7.7 && make && make install
 RUN rm -rf /tmp/nginx-1.7.7
 
 EXPOSE 80
-EXPOSE 443s
+EXPOSE 443
 
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx"]
 
