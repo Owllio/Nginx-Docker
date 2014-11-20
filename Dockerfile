@@ -28,8 +28,8 @@ RUN cd /tmp/nginx-1.7.7 && make && make install
 # Remove the source files.. we don't need them anymore
 RUN rm -rf /tmp/nginx-1.7.7
 
-EXPOSE 80 # http
-EXPOSE 443 # https
+EXPOSE 80
+EXPOSE 443s
 
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx"]
 
