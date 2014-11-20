@@ -1,6 +1,6 @@
 FROM owllio/baseimage
 
-RUN cd /tmp && wget http://nginx/download/nginx-1.7.7.tar.gz && tar -xzvf nginx-1.7.7.tar.gz
+RUN cd /tmp && wget http://nginx.org/download/nginx-1.7.7.tar.gz && tar -xzvf nginx-1.7.7.tar.gz
 RUN cd /tmp/nginx-1.7.7 && ./configure \
     --prefix=/usr/share/nginx \
 		--sbin-path=/usr/sbin/nginx \
