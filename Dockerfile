@@ -35,4 +35,4 @@ VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/v
 
 WORKDIR /etc/nginx
 
-CMD ["nginx"]
+CMD /usr/sbin/nginx -g "daemon off;"
